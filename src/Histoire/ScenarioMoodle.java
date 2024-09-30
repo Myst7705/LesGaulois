@@ -1,12 +1,12 @@
-package histoire;
+package Histoire;
 
 import personnages.Druide;
-import personnages.Equipement;
+import personnages.Equipements;
 import personnages.Gaulois;
 import personnages.Romain;
-import villagegaulois.Musee;
+//import villagegaulois.Musee;
 
-public class Scenario {
+public class ScenarioMoodle {
 
 	public static void main(String[] args) {
 		Druide druide = new Druide("Panoramix", 5, 10);
@@ -20,9 +20,9 @@ public class Scenario {
 		asterix.parler("Bonjour");
 		Romain minus = new Romain("Minus", 6);
 		Romain milexcus = new Romain("Milexcus", 8);
-		minus.sEquiper(Equipement.BOUCLIER);
-		minus.sEquiper(Equipement.CASQUE);
-		milexcus.sEquiper(Equipement.CASQUE);
+		minus.sEquiper(Equipements.BOUCLIER);
+		minus.sEquiper(Equipements.CASQUE);
+		milexcus.sEquiper(Equipements.CASQUE);
 		minus.parler("UN GAU... UN GAUGAU...");
 		do {
 			asterix.frapper(minus);

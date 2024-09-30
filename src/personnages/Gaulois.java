@@ -19,6 +19,10 @@ public class Gaulois {
 	public String getNom() {
 		return nom;
 	}
+	
+	public int getForce() {
+		return force;
+	}
 
 	@Override
 
@@ -47,12 +51,16 @@ public class Gaulois {
 	public void frapper(Romain romain) {
 		System.out.println(nom + " envoie un grand coup dans la mâchoire de " + romain.getNom());
 		Equipements[] trophees = romain.recevoirCoup((force / 3) * effetPotion);
-		for (int i = 0; trophees != null && i < trophees.length; i++,
-		nb_trophees++) {
-		this.trophees[nb_trophees] = trophees[i];
+		for (int i = 0; trophees != null && i < trophees.length; i++, nbTrophees++) {
+		this.trophees[nbTrophees] = trophees[i];
 		}
 		return;
 		}
+	
+	public void boirePotion(int forcePotion) {
+		effetPotion = forcePotion;
+		System.out.println("Merci Druide, je sens que ma force est " + forcePotion + "fois decuplee");
+	}
 
 	public static void main(String[] args) {
 		/*
